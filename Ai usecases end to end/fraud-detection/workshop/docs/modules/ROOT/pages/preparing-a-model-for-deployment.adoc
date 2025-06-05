@@ -1,0 +1,27 @@
+[id='preparing-a-model-for-deployment']
+= Preparing a model for deployment
+
+After you train a model, you can deploy it by using the {productname-short} model serving capabilities.
+
+To prepare a model for deployment, you must move the model from your workbench to your S3-compatible object storage. Use the connection that you created in the xref:storing-data-with-connections.adoc[Storing data with connections] section and upload the model from a notebook. 
+
+.Prerequisites
+
+* You created the `My Storage` connection and have added it
+to your workbench.
++
+image::projects/ds-project-connections.png[Data storage in workbench]
+
+.Procedure
+
+. In your JupyterLab environment, open the `2_save_model.ipynb` file.
+
+. Follow the instructions in the notebook to make the model accessible in storage.
+
+.Verification
+
+When you have completed the notebook instructions, the `models/fraud/1/model.onnx` file is in your object storage and it is ready for your model server to use.
+
+.Next step
+
+xref:deploying-a-model.adoc[Deploying a model]
